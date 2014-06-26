@@ -46,7 +46,7 @@
             var hour = dataCurenta.getHours();
             var minutes = dataCurenta.getMinutes();
 
-            var activeId = 'table1row1cell8';
+            var activeId = '';
 
             switch (hour) {
                 case 0:
@@ -95,10 +95,10 @@
                     if (minutes < 10)
                         activeId = 'table1row3cell2';
                     break;
-
             }
 
-            document.getElementById(activeId).className = "activeHour";
+            if (activeId)
+                document.getElementById(activeId).className = "activeHour";
 
         };
 
